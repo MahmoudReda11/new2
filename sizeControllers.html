@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  
+  </style>
+</head>
+<body>
+
+    <div>
+        <label for="rangeInput1">تحكم في عرض الكورة 1:</label>
+        <input type="range" id="rangeInput1" min="30" max="80" step="1" value="50">
+        
+    </div>
+
+    <div>
+        <label for="rangeInput2">تحكم في عرض الكورة 2:</label>
+        <input type="range" id="rangeInput2" min="30" max="80" step="1" value="50">
+        
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          var rangeInput1 = document.getElementById('rangeInput1');
+          var rangeInput2 = document.getElementById('rangeInput2');
+      
+          rangeInput1.addEventListener('input', function() {
+     
+            localStorage.setItem('inputValue', rangeInput1.value);
+          });
+
+          rangeInput2.addEventListener('input', function() {
+    
+            localStorage.setItem('inputValue2', rangeInput2.value);
+          });
+
+
+        
+        });
+      </script>
+
+
+</body>
+</html>

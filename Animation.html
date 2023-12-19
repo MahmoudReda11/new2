@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- file css -->
+    <link rel="stylesheet" href="css/mystyle.css">
+
+
+</head>
+<body>
+    <div class="container">
+        <div class="div-balls">
+          <div id="ball1">طوفان </div>
+          <div id="ball2">الأقصي</div>
+        </div>
+      
+          <img class="centerimage" src="imgs/Quds1.png" alt="">
+      
+          <img id="imgChang" class="imgChang" src="imgs/p1.png" alt="">
+      </div>
+
+
+
+      <script>
+
+        
+        document.addEventListener('DOMContentLoaded', function() {
+          var ball1 = document.getElementById('ball1');
+          var ball2 = document.getElementById('ball2');
+
+      
+   
+          window.addEventListener('storage', function(event) {
+            if (event.key === 'inputValue') {
+
+              ball1.style.height = event.newValue + 'px';
+              ball1.style.width = event.newValue + 'px';  
+                console.log(event.key)
+            }else if(event.key === 'inputValue2'){
+
+              ball2.style.height = event.newValue + 'px';
+              ball2.style.width = event.newValue + 'px';  
+                console.log(event.key)
+            }
+          });
+      
+    
+          var storedValue = localStorage.getItem('inputValue');
+          var storedValue2 = localStorage.getItem('inputValue2');
+
+          if (storedValue) {
+            ball1.style.height = event.newValue + 'px';
+            ball1.style.width = event.newValue + 'px';
+          }
+          
+          else if(storedValue2){
+            ball2.style.height = event.newValue + 'px';
+            ball2.style.width = event.newValue + 'px';
+          }
+
+          
+        });
+      </script>
+
+   
+      
+    <script src="js/main.js"></script>
+</body>
+</html>
